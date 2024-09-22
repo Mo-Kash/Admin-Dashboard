@@ -14,7 +14,7 @@
 body{
     margin:0;
     display: grid;
-    grid-template-columns: 0.75fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
     grid-template-rows: 250px 500px 500px;
     grid-template-areas: "sidebar navbar navbar navbar" 
     "sidebar projects projects announcements" 
@@ -91,7 +91,7 @@ img{
     padding-right: 50px;
     background-color: var(--white);
     border: 1px solid var(--white);
-    box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 20px 15px -20px rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
 
@@ -126,7 +126,7 @@ img{
 }
 
 .socials img{
-    width: 4em;
+    width: 2.5em;
     height: auto;
 }
 
@@ -137,7 +137,7 @@ img{
 }
 
 .actions button{
-    width: 8em;
+    width: 6.5em;
     height: 2.5em;
     border: none;
     border-radius: 40px;
@@ -148,6 +148,11 @@ img{
     font-size: 1.5em;
     font-weight: 500;
     cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.actions button:hover{
+    background-color: #40a1ce;
 }
 
 .intro{
@@ -180,9 +185,45 @@ img{
     border: 1px solid var(--lighter);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     background-color: var(--white);
-    padding: 10px;
+    padding: 20px;
+
+    border-left: 15px solid var(--darker);
+
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
 }
 
+.projectitemheader{
+    width: 100%;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 400;
+    
+}
+
+.projectitemdescription{
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.projectitemfooter{
+    margin-top: 6em;
+    padding-left: 25rem;
+}
+
+.projectitemfooter img{
+    width: 1.5em;
+    height: auto;
+}
+
+.projectitemfooter a>img{
+    background-color: var(--lighter);
+}
 
 .projects :nth-child(odd){
     margin-left: 15px;
@@ -217,8 +258,23 @@ img{
     margin-bottom: 24px;
 }
 
-.acard>div{
+.a1,.a2{
     border-bottom: 1px solid #d1d5db;
+}
+
+.a1, .a2, .a3{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.aheader{
+    font-size: 1.25em;
+    font-weight: 400;
+    margin-bottom: 0;
+
 }
 
 .trending{
@@ -237,7 +293,7 @@ img{
 .tcard{
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
     border-radius: 20px;
     border: 1px solid #f8fafc;
@@ -246,8 +302,22 @@ img{
     padding: 10px;
 }
 
+.t1, .t2, .t3{
+    border-bottom: 1px solid #d1d5db;
+}
+
+.trendingppl img{
+    width: 2.5em;
+    height: auto;
+    margin-right: 10px;
+}
+
 .ptitle, .atitle, .ttitle{
     font-size: 1.5em;
     font-weight: 500;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
